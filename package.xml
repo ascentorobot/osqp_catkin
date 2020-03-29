@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package format="2">
+  <name>osqp_catkin</name>
+  <version>0.0.0</version>
+  <description>Catkin wrapper around OSQP.</description>
+  <maintainer email="lgulich@ethz.ch">Lionel Gulich</maintainer>
+  <license>Closed</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

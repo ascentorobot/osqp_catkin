@@ -1,8 +1,17 @@
-# Minimum version required
-cmake_minimum_required (VERSION 3.2)
+cmake_minimum_required (VERSION 3.5)
+project(osqp_catkin)
 
-# Project name
-project (osqp)
+find_package(catkin REQUIRED)
+
+catkin_package(
+  INCLUDE_DIRS include
+  LIBRARIES osqp
+)
+
+set(MATLAB OFF)
+set(PYTHON OFF)
+set(R_LANG OFF)
+
 
 # Export compile commands
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -15,8 +24,6 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/out)
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/configure/cmake)
 INCLUDE(FindPythonModule)
 INCLUDE(Utils)
-# include(FindMKL)  # Find MKL module
-
 
 # Detect operating system
 # ----------------------------------------------
